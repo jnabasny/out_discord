@@ -16,8 +16,16 @@ go build -buildmode=c-shared -o out_discord.so out_discord.go
 
 ## Example Configuration
 
-The only *required* fields are `Name`, `URL`, and `Match`:
+**plugins.conf**
 
+```ini
+[PLUGINS]
+	Path /path/to/out_discord.so
+```
+
+**Main configuration**
+
+The only *required* fields are `Name`, `URL`, and `Match`:
 ```ini
 [OUTPUT]
     Name discord
