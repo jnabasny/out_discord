@@ -80,7 +80,7 @@ func FLBPluginFlush(data unsafe.Pointer, length C.int, tag *C.char) int {
 
 			// Print strings as strings
 			switch v.(type) {
-			case bool, int, float32, float64:
+			case bool, int, int64, uint64, float32, float64:
 			        POST_DATA = fmt.Sprintf("%s[%s]  %v\\n", POST_DATA, k, v)
 			default:
 			        POST_DATA = fmt.Sprintf("%s[%s]  %s\\n", POST_DATA, k, v)
